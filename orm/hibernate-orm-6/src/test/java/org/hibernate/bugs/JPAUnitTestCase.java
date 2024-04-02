@@ -31,7 +31,9 @@ public class JPAUnitTestCase {
 	public void hhh123Test() throws Exception {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		entityManager.getTransaction().begin();
-		// Do stuff...
+
+		entityManager.persist(new User());
+
 		entityManager.getTransaction().commit();
 		entityManager.close();
 	}
